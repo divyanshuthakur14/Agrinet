@@ -1,69 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#21FFC107"
     tools:context=".OTPVerification">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/otp_background"
-        android:adjustViewBounds="true"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-    <TextView
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/otp_background"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/otp_verification"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="50dp"
+            android:gravity="center"
+            android:text="@string/we_will_send_you_an_otp_on_this_given_mobile_number"
+            android:textSize="14sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:text="@string/enter_mobile_number"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
         android:gravity="center"
-        android:text="Please enter your code that we have sent to you"
-        android:textColor="#66000000"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"/>
+        android:background="@drawable/backgroundbox"
+        android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email Address"
-        android:textColor="#66000000"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:textSize="12sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="+91"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="#CC000000"
-        android:layout_marginTop="10dp"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="test@gmail.com"/>
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mobile Number"
-        android:textColor="#66000000"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:textSize="12sp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="#CC000000"
-        android:layout_marginTop="10dp"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="test@gmail.com"/>
+        <EditText
+            android:id="@+id/input_mobile_number"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:hint="xxxxxxxxxx"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
 
 
 
 
+    </LinearLayout>
 
-</LinearLayout>
+        <Button
+            android:id="@+id/buttongetotp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get Otp"
+            android:layout_margin="30dp"
+            android:textColor="@color/black"
+            style="bold"
+            android:background="@drawable/backgroundbutton"/>
+    </LinearLayout>
+
+
+
+
+</ScrollView>
