@@ -90,6 +90,10 @@
 
     </LinearLayout>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
         <Button
             android:id="@+id/buttongetotp"
             android:layout_width="match_parent"
@@ -99,6 +103,16 @@
             android:textColor="@color/black"
             style="bold"
             android:background="@drawable/backgroundbutton"/>
+
+        <ProgressBar
+            android:id="@+id/progressbar_sending_otp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+        </FrameLayout>
+
     </LinearLayout>
 
 
