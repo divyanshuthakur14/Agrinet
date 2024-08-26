@@ -43,7 +43,7 @@ public class Login extends AppCompatActivity {
                     passwordET.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
                     passwordIcon.setImageResource(R.drawable.baseline_visibility_24);
                 }
-
+                    passwordET.setSelection(passwordET.length());
             }
         });
 
