@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "603502052889",
+    "project_id": "agrinet-75094",
+    "storage_bucket": "agrinet-75094.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603502052889:android:e2d0c7e59fdfdf70c9cc88",
+        "android_client_info": {
+          "package_name": "com.example.agrinet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-2AK-79vntx9elJKk6PiXjqAOn7Fsens"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

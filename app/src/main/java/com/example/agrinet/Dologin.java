@@ -8,19 +8,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-public class Login extends AppCompatActivity {
+public class Dologin extends AppCompatActivity {
 
     private boolean passwordShowing = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_dologin);
 
         final EditText usernameET = findViewById(R.id.usernameET);
         final EditText passwordET = findViewById(R.id.passwordET);
@@ -32,29 +28,26 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(passwordShowing){
-                        passwordShowing = false;
+                    passwordShowing = false;
 
-                        passwordET.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                        passwordIcon.setImageResource(R.drawable.baseline_visibility_24);
-            }
-                        else{
+                    passwordET.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                    passwordIcon.setImageResource(R.drawable.baseline_visibility_24);
+                }
+                else{
                     passwordShowing = true;
 
                     passwordET.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
                     passwordIcon.setImageResource(R.drawable.baseline_visibility_24);
                 }
-                    passwordET.setSelection(passwordET.length());
+                passwordET.setSelection(passwordET.length());
             }
         });
 
-       signUpBtn.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               startActivity(new Intent(Login.this, Register.class));
-           }
-       });
+        signUpBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Dologin.this, Register.class));
+            }
+        });
     }
 }
-
-
-
