@@ -26,7 +26,6 @@ public class Register extends AppCompatActivity {
 
         final EditText email = findViewById(R.id.emailET);
         final EditText mobile = findViewById(R.id.mobileET);
-
         final EditText password = findViewById(R.id.passwordET);
         final EditText conpassword = findViewById(R.id.conpasswordET);
         final ImageView passwordIcon = findViewById(R.id.passwordIcon);

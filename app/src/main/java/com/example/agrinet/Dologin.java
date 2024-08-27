@@ -18,7 +18,7 @@ public class Dologin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dologin);
 
-        final EditText usernameET = findViewById(R.id.usernameET);
+        final EditText emailidET = findViewById(R.id.emailidET);
         final EditText passwordET = findViewById(R.id.passwordET);
         final ImageView passwordIcon = findViewById(R.id.passwordIcon);
         final TextView signUpBtn = findViewById(R.id.signUpBtn);
