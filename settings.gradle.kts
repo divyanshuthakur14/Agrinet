@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Agrinet"
+rootProject.name = "SahyogSetu"
 include(":app")
  

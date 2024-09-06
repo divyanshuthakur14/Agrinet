@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -24,6 +25,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class Register extends AppCompatActivity {
@@ -32,6 +35,8 @@ public class Register extends AppCompatActivity {
 
     FirebaseAuth mAuth;
     ProgressBar progressBar;
+
+
 
     @Override
     public void onStart() {
@@ -50,6 +55,7 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        final EditText name = findViewById(R.id.fullNameET);
         final EditText email = findViewById(R.id.emailET);
         final EditText mobile = findViewById(R.id.mobileET);
         final EditText password = findViewById(R.id.passwordET);
@@ -112,10 +118,10 @@ public class Register extends AppCompatActivity {
             public void onClick(View v) {
 
             progressBar.setVisibility(View.VISIBLE);
-
             final String getMobileTxt = mobile.getText().toString();
             final String getEmailTxt = email.getText().toString();
             final String getPasswordTxt = password.getText().toString();
+
 
             if(TextUtils.isEmpty(getEmailTxt)){
 
